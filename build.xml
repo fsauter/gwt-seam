@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="gwt-seam" default="compile" basedir=".">
+	<property name="src.dir" value="src" />
+	<property name="lib.dir" value="lib" />
+	<property name="build.dir" value="bin" />
+	<property name="target.dir" value="target" />
+	<property name="javac.debug" value="true" />
+	<property name="javac.deprecation" value="false" />
+
+	<fileset id="lib" dir="${lib.dir}">
+		<include name="*.jar" />
+	</fileset>
+
+	<path id="build.classpath">
+		<fileset refid="lib" />
+	</path>
+
+	<target name="compile" description="Compile the Java source code">
+		<copy todir="${build.dir}/META-INF">
+			<fileset dir="META-INF" />
+		</copy>
+		<javac classpathref="build.classpath" destdir="${build.dir}" debug="${javac.debug}" deprecation="${javac.deprecation}" nowarn="on">
+			<src path="${src.dir}" />
+		</javac>
+	</target>
+
+	<target name="build-all" depends="prepare-build, compile" description="Jars both">
+		<jar destfile="${target.dir}/gwt-seam-all.jar" basedir="${build.dir}" />
+	</target>
+
+	<target name="build-seam" depends="prepare-build, compile" description="Jars both">
+		<jar destfile="${target.dir}/gwt-seam-only.jar" basedir="${build.dir}" includes="com/google/**" />
+	</target>
+
+	<target name="build-gwtp-dispatch" depends="prepare-build, compile" description="Jars both">
+		<jar destfile="${target.dir}/gwt-seam-gwtp.jar" basedir="${build.dir}" includes="com/gwtplatform/**" />
+	</target>
+
+	<target name="clean" description="Cleans up the staging directory">
+		<delete dir="${build.dir}" />
+		<delete dir="${basedir}/${target.dir}" />
+	</target>
+
+	<target name="prepare-build" depends="clean" description="Prepares the build.">
+		<mkdir dir="${build.dir}" />
+		<mkdir dir="${basedir}/${target.dir}" />
+	</target>
+
+</project>
