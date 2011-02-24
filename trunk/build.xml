@@ -19,6 +19,9 @@
 		<copy todir="${build.dir}/META-INF">
 			<fileset dir="META-INF" />
 		</copy>
+		<copy todir="${build.dir}">
+					<fileset dir="${src.dir}" />
+		</copy>
 		<javac classpathref="build.classpath" destdir="${build.dir}" debug="${javac.debug}" deprecation="${javac.deprecation}" nowarn="on">
 			<src path="${src.dir}" />
 		</javac>
