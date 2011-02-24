@@ -1,0 +1,5 @@
+#summary Description of this project.
+
+= What's about? =
+
+GWT Seam2 Integration
