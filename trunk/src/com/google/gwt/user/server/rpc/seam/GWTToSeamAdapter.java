@@ -12,7 +12,6 @@ import org.jboss.seam.Component;
 import org.jboss.seam.annotations.Install;
 import org.jboss.seam.annotations.Name;
 import org.jboss.seam.annotations.Scope;
-import org.jboss.seam.annotations.Startup;
 import org.jboss.seam.annotations.intercept.BypassInterceptors;
 import org.jboss.seam.annotations.remoting.WebRemote;
 import org.jboss.seam.util.EJB;
@@ -22,7 +21,6 @@ import org.jboss.seam.util.EJB;
  * 
  * @author Michael Neale
  */
-@Startup
 @Scope(APPLICATION)
 @Name("org.jboss.seam.remoting.gwt.gwtpToSeamAdapter")
 @BypassInterceptors

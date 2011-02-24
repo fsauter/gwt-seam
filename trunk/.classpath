@@ -4,8 +4,10 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/pacadm"/>
 	<classpathentry kind="con" path="com.google.gwt.eclipse.core.GWT_CONTAINER"/>
-	<classpathentry kind="lib" path="lib/gwtp-all-0.5.jar"/>
 	<classpathentry kind="lib" path="lib/jboss-seam.jar"/>
 	<classpathentry kind="lib" path="lib/jboss-seam-remoting.jar"/>
+	<classpathentry kind="lib" path="lib/gwtp-dispatch-client-0.5.jar"/>
+	<classpathentry kind="lib" path="lib/gwtp-dispatch-server-0.5.jar"/>
+	<classpathentry kind="lib" path="lib/gwtp-dispatch-shared-0.5.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
