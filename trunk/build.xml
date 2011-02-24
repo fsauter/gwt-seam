@@ -24,30 +24,18 @@
 		</javac>
 	</target>
 
-	<target name="build-gwt-seam" depends="prepare-build, compile" description="Jars both">
-		<antcall target="build-all" />
-		<antcall target="build-seam" />
-		<antcall target="build-gwtp-dispatch" />
-	</target>
-	
-	<target name="build-all" depends="prepare-build, compile" description="Jars both">
-		<jar destfile="${target.dir}/gwt-seam-all.jar" basedir="${build.dir}" />
-	</target>
-
-	<target name="build-seam" depends="prepare-build, compile" description="Jars both">
-		<jar destfile="${target.dir}/gwt-seam-only.jar" basedir="${build.dir}" includes="com/google/**" />
-	</target>
-
-	<target name="build-gwtp-dispatch" depends="prepare-build, compile" description="Jars both">
+	<target name="build-gwt-seam" depends="clean, prepare-build, compile" description="Jars all components.">
+		<jar destfile="${target.dir}/gwt-seam.jar" basedir="${build.dir}" />
+		<jar destfile="${target.dir}/gwt-seam-service.jar" basedir="${build.dir}" includes="com/google/**" />
 		<jar destfile="${target.dir}/gwt-seam-gwtp.jar" basedir="${build.dir}" includes="com/gwtplatform/**" />
 	</target>
-
+	
 	<target name="clean" description="Cleans up the staging directory">
 		<delete dir="${build.dir}" />
 		<delete dir="${basedir}/${target.dir}" />
 	</target>
 
-	<target name="prepare-build" depends="clean" description="Prepares the build.">
+	<target name="prepare-build" description="Prepares the build.">
 		<mkdir dir="${build.dir}" />
 		<mkdir dir="${basedir}/${target.dir}" />
 	</target>
