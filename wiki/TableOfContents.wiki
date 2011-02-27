@@ -1,2 +1,4 @@
 #sidebar TableOfContents
  * [GwtSeam About]
+ * [GettingStartedGWTRPC GWT RPC]
+ * [GettingStartedGWTPDispatch GWTP Dispatch]
