@@ -11,3 +11,5 @@ Follow the steps on Virgos blog. But instead of downloading the provided zip do 
    * the build path
    * the deployed ear jars
  * Change all service endpoints to seam/resource/gwt*p*
+
+Redeploy your project now and you should never see the IncompatibleRemoteServiceException ever again!
