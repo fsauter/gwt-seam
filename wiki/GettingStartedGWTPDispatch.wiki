@@ -55,6 +55,8 @@ public class HelloWorldHandler implements ActionHandler<HelloWorldAction, HelloW
 
 
 == The validator == 
+The great thing is, you've got access to all contexts (e.g. you could say @In MyCompontent myComponent etc.)
+
 {{{
 @AutoCreate
 @Name("loggedInActionValidator")
