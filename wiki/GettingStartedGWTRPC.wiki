@@ -5,11 +5,10 @@ http://virgo47.wordpress.com/2010/02/09/jboss-seam-gwt-2-support/
 
 Follow the steps on Virgos blog. But instead of downloading the provided zip do following:
 
- * download gwt-seam-seperate-x.zip from the download section 
- * Add gwt-seam-service.jar to 
+ # download gwt-seam-seperate-x.zip from the download section 
+ # Add gwt-seam-service.jar to 
    * your lib folder 
    * the build path
    * the deployed ear jars
- * Change all service endpoints to seam/resource/gwt*p* 
-
-Redeploy your project now and you should never see the IncompatibleRemoteServiceException ever again!
+ # Change all service endpoints to seam/resource/gwtp 
+ # Redeploy your project now and you should never see the `IncompatibleRemoteServiceException` ever again!
