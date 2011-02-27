@@ -1,4 +1,4 @@
-#Getting Started with GWT RPC
+#summary Getting Started with GWT RPC
 
 = Introduction =
 
