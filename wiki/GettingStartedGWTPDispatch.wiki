@@ -2,18 +2,11 @@
 
 Follow the steps on GettingStartedGWTRPC.
 
+== Configuration == 
+
 Create the following component:
 
 {{{
-package com.domain.mymodule.server;
-
-import org.jboss.seam.annotations.Name;
-
-import com.gwtplatform.dispatch.server.seam.DispatchConfiguration;
-import com.gwtplatform.dispatch.server.seam.HandlerRegistry;
-
-import com.domain.mymodule.shared.action.HelloWorldAction;
-
 @Name("gwtpDispatchConfiguration")
 public class SeamDispatchConfiguration implements DispatchConfiguration {
 
@@ -33,3 +26,45 @@ public class SeamDispatchConfiguration implements DispatchConfiguration {
 The important thing is the `@Name("gwtpDispatchConfiguration")` annotation. This component is equivalent to [http://code.google.com/p/gwt-platform/source/browse/gwtp-core/gwtp-dispatch-server/src/main/java/com/gwtplatform/dispatch/server/guice/HandlerModule.java GWTP's Guice Handler Module].
 
 `getEndPoint` has no effect yet. But later on you'll be able to set your custom endpoint.
+
+== The handler ==
+
+{{{ 
+@AutoCreate
+@Name("helloWorldHandler")
+@Scope(ScopeType.APPLICATION)
+public class HelloWorldHandler implements ActionHandler<HelloWorldAction, HelloWorldResult> {
+
+	@Override
+	public HelloWorldResult execute(HelloWorldAction action, ExecutionContext context) throws ActionException {
+		HelloWorldResult result = new HelloWorldResult("Hello " + action.getName() + "!");
+		return result;
+	}
+
+	@Override
+	public void undo(HelloWorldAction action, HelloWorldResult result, ExecutionContext context) throws ActionException {
+		// Nothing to do.
+	}
+
+	@Override
+	public Class<HelloWorldAction> getActionType() {
+		return HelloWorldAction.class;
+	}
+}
+}}}
+
+
+== The validator == 
+{{{
+@AutoCreate
+@Name("loggedInActionValidator")
+@Scope(ScopeType.APPLICATION)
+public class LoggedInActionValidator implements ActionValidator {
+	
+	@Override
+	public boolean isValid(Action<? extends Result> action) throws ActionException {
+		return Identity.instance().isLoggedIn();
+	}
+
+}
+}}}
