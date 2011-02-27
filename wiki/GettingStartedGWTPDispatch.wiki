@@ -30,4 +30,6 @@ public class SeamDispatchConfiguration implements DispatchConfiguration {
 }
 }}}
 
-The important thing is the `@Name("gwtpDispatchConfiguration")` Annotation. This component is equivalent to [http://code.google.com/p/gwt-platform/source/browse/gwtp-core/gwtp-dispatch-server/src/main/java/com/gwtplatform/dispatch/server/guice/HandlerModule.java GWTPs Handler Module].
+The important thing is the `@Name("gwtpDispatchConfiguration")` annotation. This component is equivalent to [http://code.google.com/p/gwt-platform/source/browse/gwtp-core/gwtp-dispatch-server/src/main/java/com/gwtplatform/dispatch/server/guice/HandlerModule.java GWTP's Guice Handler Module].
+
+`getEndPoint` has no effect yet. But later on you'll be able to set your custom endpoint.
