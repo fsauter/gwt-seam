@@ -27,6 +27,18 @@ The important thing is the `@Name("gwtpDispatchConfiguration")` annotation. This
 
 `getEndPoint` has no effect yet. But later on you'll be able to set your custom endpoint.
 
+== The action ==
+Important: Set the right endpoint (serviceName)!
+
+@GenDispatch(serviceName="seam/resource/gwtp", isSecure=false)
+public class HelloWorld {
+
+	@In(1) String name;
+	
+	@Out(1) String greeting;
+}
+
+
 == The handler ==
 
 {{{ 
