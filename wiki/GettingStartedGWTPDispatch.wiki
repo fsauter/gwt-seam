@@ -4,7 +4,7 @@ Follow the steps on GettingStartedGWTRPC.
 
 Create the following component:
 
-
+{{{
 package com.domain.mymodule.server;
 
 import org.jboss.seam.annotations.Name;
@@ -14,7 +14,6 @@ import com.gwtplatform.dispatch.server.seam.HandlerRegistry;
 
 import com.domain.mymodule.shared.action.HelloWorldAction;
 
-{{{
 @Name("gwtpDispatchConfiguration")
 public class SeamDispatchConfiguration implements DispatchConfiguration {
 
@@ -31,6 +30,4 @@ public class SeamDispatchConfiguration implements DispatchConfiguration {
 }
 }}}
 
-The important thing is the 
-{{{ @Name("gwtpDispatchConfiguration") }}}
-Annotation
+The important thing is the `@Name("gwtpDispatchConfiguration")` Annotation. This component is equivalent to [http://code.google.com/p/gwt-platform/source/browse/gwtp-core/gwtp-dispatch-server/src/main/java/com/gwtplatform/dispatch/server/guice/HandlerModule.java GWTPs Handler Module].
