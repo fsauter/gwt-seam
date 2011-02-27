@@ -30,6 +30,7 @@ The important thing is the `@Name("gwtpDispatchConfiguration")` annotation. This
 == The action ==
 Important: Set the right endpoint (serviceName)!
 
+{{{
 @GenDispatch(serviceName="seam/resource/gwtp", isSecure=false)
 public class HelloWorld {
 
@@ -37,7 +38,7 @@ public class HelloWorld {
 	
 	@Out(1) String greeting;
 }
-
+}}}
 
 == The handler ==
 
