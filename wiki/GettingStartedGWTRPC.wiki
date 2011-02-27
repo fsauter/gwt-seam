@@ -2,8 +2,28 @@
 
 = Introduction =
 
-Add your content here.
+GWT 2.0.0 changed some details in its RPC protocol and built-in Seam support for GWT stopped working with errors like this:
 
+{{{
+2010-02-09  10:28:12,265 ERROR  [org.apache.catalina.core.ContainerBase.[jboss.web].[localhost].[/whatever]]  (http-127.0.0.1-8080-1) An IncompatibleRemoteServiceException was  thrown while processing this call.
+com.google.gwt.user.client.rpc.IncompatibleRemoteServiceException:  Parameter 0 of is of an unknown type 'some.Class/some number'
+at  org.jboss.seam.remoting.gwt.GWTService.RPC_decodeRequest(GWTService.java:426)
+at  org.jboss.seam.remoting.gwt.GWTService.processCall(GWTService.java:203)
+at  org.jboss.seam.remoting.gwt.GWTService$1.process(GWTService.java:120)
+at  org.jboss.seam.servlet.ContextualHttpServletRequest.run(ContextualHttpServletRequest.java:53)
+at  org.jboss.seam.remoting.gwt.GWTService.getResource(GWTService.java:105)
+at  org.jboss.seam.servlet.SeamResourceServlet.service(SeamResourceServlet.java:80)
+...
+Caused  by: java.lang.ClassNotFoundException: some.Class/number
+at  java.lang.Class.forName0(Native Method)
+at  java.lang.Class.forName(Class.java:247)
+at  org.jboss.seam.remoting.gwt.GWTService.RPC_getClassFromSerializedName(GWTService.java:479)
+at  org.jboss.seam.remoting.gwt.GWTService.RPC_decodeRequest(GWTService.java:422)
+... 46 more
+}}}
+
+Radovan Sninský and Virgo created a quick fix which is included in the gwt-seam.jar:
+http://virgo47.wordpress.com/2010/02/09/jboss-seam-gwt-2-support/
 
 = Details =
 
