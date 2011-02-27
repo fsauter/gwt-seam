@@ -1,13 +1,36 @@
 #summary Getting Started with GWTP Dispatch.
 
-= Introduction =
+Follow the steps on GettingStartedGWTRPC.
 
-Add your content here.
+Create the following component:
 
 
-= Details =
+package com.domain.mymodule.server;
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+import org.jboss.seam.annotations.Name;
+
+import com.gwtplatform.dispatch.server.seam.DispatchConfiguration;
+import com.gwtplatform.dispatch.server.seam.HandlerRegistry;
+
+import com.domain.mymodule.shared.action.HelloWorldAction;
+
+{{{
+@Name("gwtpDispatchConfiguration")
+public class SeamDispatchConfiguration implements DispatchConfiguration {
+
+	@Override
+	public String getEndPoint() {
+		return DispatchConfiguration.DEFAULT_ENDPOINT;
+	}
+
+	@Override
+	public void configureHandlers(HandlerRegistry handlerRegistry) {
+		handlerRegistry.bindHandler(HelloWorldAction.class, HelloWorldHandler.class, LoggedInActionValidator.class);
+	}
+
+}
+}}}
+
+The important thing is the 
+{{{ @Name("gwtpDispatchConfiguration") }}}
+Annotation
