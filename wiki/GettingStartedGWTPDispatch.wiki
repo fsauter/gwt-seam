@@ -83,3 +83,7 @@ public class LoggedInActionValidator implements ActionValidator {
 
 }
 }}}
+
+== Restrictions ==
+
+The seam implementation does not provide a way for Automatic XSRF attack detection yet.
