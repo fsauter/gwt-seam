@@ -17,5 +17,5 @@ serviceDefTarget.setServiceEntryPoint(GWT.getHostPageBaseURL() + "seam/resource/
  # Redeploy your project now and you should never see the `IncompatibleRemoteServiceException` ever again!
 
 
-Note: Radovan Sninský and Virgo created the quick fix which is included in the gwt-seam.jar:
-http://virgo47.wordpress.com/2010/02/09/jboss-seam-gwt-2-support/
+_Note: Radovan Sninský and Virgo created the quick fix which is included in the gwt-seam.jar:
+[http://virgo47.wordpress.com/2010/02/09/jboss-seam-gwt-2-support/]_
