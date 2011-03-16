@@ -1,6 +1,11 @@
 #summary Getting Started with Seam GWTP Dispatch.
 
- * [#Notice]
+ * [#Notice Notice]
+ * [#Configuration Configuration]
+ * [#The_action Action]
+ * [#The_handler Handler]
+ * [#The_validator Validator]
+ * [#Restrictions Restrictions]
 
 == Notice ==
 
