@@ -1,10 +1,6 @@
 #summary Getting Started with GWT RPC
 
-Radovan Sninský and Virgo created a quick fix which is included in the gwt-seam.jar:
-http://virgo47.wordpress.com/2010/02/09/jboss-seam-gwt-2-support/
-
-Follow the steps on Virgos blog. But instead of downloading the provided zip do following:
-
+ # Copy (override) gwt-servlet.jar to EAR project, lib folder. (this jar is from gwt and not from seam)
  # download gwt-seam-seperate-x.zip from the download section 
  # Add gwt-seam-service.jar to 
    * your lib folder 
@@ -12,3 +8,7 @@ Follow the steps on Virgos blog. But instead of downloading the provided zip do 
    * the deployed ear jars
  # Change all service endpoints to seam/resource/*gwtp* 
  # Redeploy your project now and you should never see the `IncompatibleRemoteServiceException` ever again!
+
+
+Note: Radovan Sninský and Virgo created the quick fix which is included in the gwt-seam.jar:
+http://virgo47.wordpress.com/2010/02/09/jboss-seam-gwt-2-support/
