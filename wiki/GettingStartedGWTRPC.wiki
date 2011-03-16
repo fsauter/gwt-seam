@@ -8,8 +8,11 @@
    * the deployed ear jars
  # Change all service endpoints to seam/resource/*gwtp* 
 {{{
-GreetingServiceAsync svc = GWT.create(GreetingService.class);
-((ServiceDefTarget) svc).setServiceEntryPoint(GWT.getHostPageBaseURL() + "seam/resource/gwtp");
+GreetingServiceAsync serviceAsync = GWT.create(GreetingService.class);
+ServiceDefTarget serviceDefTarget = (ServiceDefTarget) serviceAsync;
+serviceDefTarget.setServiceEntryPoint(GWT.getHostPageBaseURL() + "seam/resource/gwtp");
+
+
 }}}
  # Redeploy your project now and you should never see the `IncompatibleRemoteServiceException` ever again!
 
