@@ -2,6 +2,7 @@
 #labels Phase-Deploy,Featured,Phase-Implementation,GWTP,Dispatch
 
  * [#Notice Notice]
+ * [#Project_setup Setup]
  * [#The_configuration The Configuration]
  * [#The_action The Action]
  * [#The_handler The Handler]
@@ -10,7 +11,16 @@
 
 == Notice ==
 
-You should already be familiar with the [http://code.google.com/p/gwt-platform/wiki/GettingStartedDispatch GWTP Dispatch Module] then follow the steps on [GettingStartedGWTRPC].
+You should already be familiar with the [http://code.google.com/p/gwt-platform/wiki/GettingStartedDispatch GWTP Dispatch Module] and a working GWTP project skeleton in your src folder which inherits the GWTP Dispatch Module.
+
+== Project setup ==
+
+ # Copy (override) gwt-servlet.jar to EAR project, lib folder. (this jar is from gwt and not from seam)
+ # download gwt-seam.jar from the download section 
+ # Add gwt-seam.jar to 
+   * your lib folder 
+   * the build path
+   * the deployed ear jars
 
 = Setting up an Action/Handler (including Validator) pair =
 
