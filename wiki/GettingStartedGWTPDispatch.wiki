@@ -2,7 +2,7 @@
 #labels Phase-Deploy,Featured,Phase-Implementation,GWTP,Dispatch
 
  * [#Notice Notice]
- * [#The_Configuration The Configuration]
+ * [#The_configuration The Configuration]
  * [#The_action The Action]
  * [#The_handler The Handler]
  * [#The_validator The Validator]
