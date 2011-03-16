@@ -12,6 +12,8 @@
 
 You should already be familiar with the [http://code.google.com/p/gwt-platform/wiki/GettingStartedDispatch GWTP Dispatch Module] then follow the steps on GettingStartedGWTRPC.
 
+= Setting up an Action/Handler (including Validator) pair =
+
 == The configuration == 
 
 Create the following component:
