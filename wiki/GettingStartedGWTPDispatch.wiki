@@ -1,6 +1,6 @@
 #summary Getting Started with Seam GWTP Dispatch.
 
- * [GettingStartedGWTPDispatch#Notice Notice]
+ * [#Notice]
 
 == Notice ==
 
