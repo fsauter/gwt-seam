@@ -2,17 +2,17 @@
 #labels Phase-Deploy,Featured,Phase-Implementation,GWTP,Dispatch
 
  * [#Notice Notice]
- * [#Configuration Configuration]
- * [#The_action Action]
- * [#The_handler Handler]
- * [#The_validator Validator]
+ * [#The_Configuration The Configuration]
+ * [#The_action The Action]
+ * [#The_handler The Handler]
+ * [#The_validator The Validator]
  * [#Restrictions Restrictions]
 
 == Notice ==
 
 You should already be familiar with the [http://code.google.com/p/gwt-platform/wiki/GettingStartedDispatch GWTP Dispatch Module] then follow the steps on GettingStartedGWTRPC.
 
-== Configuration == 
+== The configuration == 
 
 Create the following component:
 
@@ -51,9 +51,9 @@ public class HelloWorld {
 }}}
 
 == The handler ==
+It is important that this handler is annotated with `@Name` to tell anybody (particularly seam) that this is a component which can be managed by seam. The `ScopeType` should be Application so seam does not have to create each time a new instance
 
 {{{ 
-@AutoCreate
 @Name("helloWorldHandler")
 @Scope(ScopeType.APPLICATION)
 public class HelloWorldHandler implements ActionHandler<HelloWorldAction, HelloWorldResult> {
@@ -78,10 +78,11 @@ public class HelloWorldHandler implements ActionHandler<HelloWorldAction, HelloW
 
 
 == The validator == 
+It is important that this validator is also annotated with `@Name`.
+
 The great thing is, you've got access to all contexts (e.g. you could say `@In MyCompontent myComponent` etc.)
 
 {{{
-@AutoCreate
 @Name("loggedInActionValidator")
 @Scope(ScopeType.APPLICATION)
 public class LoggedInActionValidator implements ActionValidator {
