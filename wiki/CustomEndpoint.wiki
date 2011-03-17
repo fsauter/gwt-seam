@@ -1,0 +1,31 @@
+#summary Description how to setup your endpoint
+
+= Set you own endpoint =
+
+By default you have to use ../seam/resource/gwtp as endpoint but you can define a custom resource endpoint:
+
+Create a `gwtseam.properties` with the following property:
+{{{
+gwt.rpc.endpoint=dispatcher
+}}}
+
+Your service:
+{{{
+...
+@RemoteServiceRelativePath("../seam/resource/dispatcher")
+public interface GreetingService extends RemoteService {
+        String greetServer(String name) throws IllegalArgumentException;
+}
+}}}
+The property file must be placed into the jar of your ear.
+
+Example project structure:
+
+helloworld.ear
+  |+ helloworld.war // Contains web pages etc.
+  |+ helloworld.jar // Contains Seam components
+    |+ META-INF/
+    |+ gwtseam.properties
+    |+ seam.properties
+    |+ com
+      |+ ....
