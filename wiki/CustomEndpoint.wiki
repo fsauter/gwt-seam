@@ -1,6 +1,6 @@
 #summary Description how to setup your endpoint
 
-= Set you own endpoint =
+= Custom endpoint =
 
 By default you have to use ../seam/resource/gwtp as endpoint but you can define a custom resource endpoint:
 
@@ -17,10 +17,11 @@ public interface GreetingService extends RemoteService {
         String greetServer(String name) throws IllegalArgumentException;
 }
 }}}
-The property file must be placed into the jar of your ear.
+
+*Note:* The property file must be placed into the jar of your ear.
 
 Example project structure:
-
+{{{
 helloworld.ear
   |+ helloworld.war // Contains web pages etc.
   |+ helloworld.jar // Contains Seam components
@@ -29,3 +30,4 @@ helloworld.ear
     |+ seam.properties
     |+ com
       |+ ....
+}}}
