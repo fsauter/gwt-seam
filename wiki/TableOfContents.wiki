@@ -2,3 +2,4 @@
  * [GwtSeam About]
  * [GettingStartedGWTRPC GWT RPC]
  * [GettingStartedGWTPDispatch GWTP Dispatch]
+ * [CustomEndpoint Custom Endpoint]
