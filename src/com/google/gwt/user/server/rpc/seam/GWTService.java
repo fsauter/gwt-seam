@@ -7,6 +7,8 @@ import java.net.URL;
 import java.text.ParseException;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.MissingResourceException;
+import java.util.ResourceBundle;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
@@ -47,7 +49,20 @@ public abstract class GWTService extends AbstractResource implements Serializati
 
 	@Override
 	public String getResourcePath() {
-		return "/gwtp";
+		String endpoint = "gwtp";
+		
+		try {
+			ResourceBundle bundle = ResourceBundle.getBundle("gwtseam");
+			Object customEndpoint = bundle.getObject("gwt.rpc.endpoint");
+			if(customEndpoint != null) {
+				endpoint = String.valueOf(customEndpoint);
+				getServletContext().log("Found gwtseam.properties and custom endpoint seam/resource/" + endpoint);
+			}
+		} catch(MissingResourceException e) {
+			getServletContext().log("No gwtseam.properties found. Falling back to endpoint seam/resource/" + endpoint);
+		}
+		
+		return "/" + endpoint;
 	}
 
 	protected abstract ServerSerializationStreamReader getStreamReader();
