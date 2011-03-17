@@ -4,7 +4,7 @@
 
 By default you have to use ../seam/resource/gwtp as resource endpoint but you can also define your own.
 
-Create a `gwtseam.properties` with the following property:
+Create a `gwtseam.properties` file with the following contents:
 {{{
 gwt.rpc.endpoint=dispatcher
 }}}
