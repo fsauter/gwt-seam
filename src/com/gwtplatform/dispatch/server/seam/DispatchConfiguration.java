@@ -1,8 +1,5 @@
 package com.gwtplatform.dispatch.server.seam;
 
-import org.jboss.seam.ScopeType;
-import org.jboss.seam.annotations.Scope;
-
 /**
  * The dispatch configuration of GWTP Seam.
  * <p>
@@ -12,12 +9,6 @@ import org.jboss.seam.annotations.Scope;
  * 
  * @author Florian Sauter
  */
-@Scope(ScopeType.APPLICATION)
 public interface DispatchConfiguration {
-	
-	public static final String DEFAULT_ENDPOINT = "seam/resource/gwtp";
-	
-	String getEndPoint();
-
 	void configureHandlers(HandlerRegistry handlerRegistry);
 }
