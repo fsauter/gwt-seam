@@ -33,11 +33,6 @@ Create the following component:
 public class SeamDispatchConfiguration implements DispatchConfiguration {
 
 	@Override
-	public String getEndPoint() {
-		return DispatchConfiguration.DEFAULT_ENDPOINT;
-	}
-
-	@Override
 	public void configureHandlers(HandlerRegistry handlerRegistry) {
 		handlerRegistry.bindHandler(HelloWorldAction.class, HelloWorldHandler.class, LoggedInActionValidator.class);
 	}
@@ -47,10 +42,8 @@ public class SeamDispatchConfiguration implements DispatchConfiguration {
 
 Please be aware of the `@Name("gwtpDispatchConfiguration")` annotation (it has to be this name and not any other). This component is equivalent to [http://code.google.com/p/gwt-platform/source/browse/gwtp-core/gwtp-dispatch-server/src/main/java/com/gwtplatform/dispatch/server/guice/HandlerModule.java GWTP's Guice Handler Module].
 
-_Note: `getEndPoint` has no effect yet. But later on you'll be able to set your custom endpoint._
-
 == The action ==
-_Only thing to know: The serviceName/endpoint must be `seam/resource/gwtp`!_
+Only thing to know: The serviceName/endpoint have to be `seam/resource/gwtp` unless you've set your own CustomEndpoint. 
 
 {{{
 @GenDispatch(serviceName="seam/resource/gwtp", isSecure=false)
