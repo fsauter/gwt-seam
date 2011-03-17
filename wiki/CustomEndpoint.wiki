@@ -9,7 +9,7 @@ Create a `gwtseam.properties` file with the following contents:
 gwt.rpc.endpoint=dispatcher
 }}}
 
-Your service:
+Adapt the `RemoteServiceRelativePath` of your services:
 {{{
 ...
 @RemoteServiceRelativePath("../seam/resource/dispatcher")
