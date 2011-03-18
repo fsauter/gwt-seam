@@ -4,3 +4,5 @@
  * [GettingStartedGWTPDispatch GWTP Dispatch]
  * Trivial features
   * CustomEndpoint
+ * Running Examples
+  * GWTRPCHelloWorldSeamSample
