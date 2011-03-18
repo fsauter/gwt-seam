@@ -14,7 +14,7 @@
    </servlet-mapping>
 }}}
  # Download gwt-seam-seperate-x.zip from the download section 
- # If you are using seam-gen the project you must do the following:
+ # If you are using a seam-gen generated project you must do the following:
 {{{
 MyGWTSeamProject
   |+ ....
