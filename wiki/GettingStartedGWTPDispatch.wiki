@@ -4,7 +4,7 @@
  * [#Notice Notice]
  * [#Project_setup Setup]
  * [#The_configuration The Configuration]
- * [#The_action The Action]
+ * [#The_action_and_result The Action]
  * [#The_handler The Handler]
  * [#The_validator The Validator]
  * [#Restrictions Restrictions]
@@ -22,7 +22,7 @@ You should already be familiar with the [http://code.google.com/p/gwt-platform/w
    * the build path
    * the deployed ear jars
 
-= Setting up an Action/Handler (including Validator) pair =
+= Setting up an Action/Result/Handler (including Validator) pair =
 
 == The configuration == 
 
@@ -42,7 +42,7 @@ public class SeamDispatchConfiguration implements DispatchConfiguration {
 
 Please be aware of the `@Name("gwtpDispatchConfiguration")` annotation (it has to be this name and not any other). This component is equivalent to [http://code.google.com/p/gwt-platform/source/browse/gwtp-core/gwtp-dispatch-server/src/main/java/com/gwtplatform/dispatch/server/guice/HandlerModule.java GWTP's Guice Handler Module].
 
-== The action ==
+== The action and result ==
 Only thing to know: The serviceName/endpoint have to be `seam/resource/gwtp` unless you've set your own CustomEndpoint. 
 
 {{{
