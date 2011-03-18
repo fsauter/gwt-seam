@@ -1,7 +1,6 @@
 #summary Getting Started with GWT RPC
 
  # Make sure your web.xml contains the `SeamResourceServlet`
-
 {{{
    <servlet>
       <servlet-name>Seam Resource Servlet</servlet-name>
@@ -13,7 +12,6 @@
       <url-pattern>/seam/resource/*</url-pattern>
    </servlet-mapping>
 }}}
-
  # Copy (override) gwt-servlet.jar to EAR project, lib folder. (this jar is from gwt and not from seam)
  # download gwt-seam-seperate-x.zip from the download section 
  # Add gwt-seam-service.jar to 
