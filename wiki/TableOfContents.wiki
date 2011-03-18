@@ -5,4 +5,4 @@
  * Trivial features
   * CustomEndpoint
  * Running Examples
-  * GWTRPCHelloWorldSeamSample
+  * HelloWorldSeamSample
