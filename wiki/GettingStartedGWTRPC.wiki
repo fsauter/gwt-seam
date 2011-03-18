@@ -1,6 +1,10 @@
 #summary Getting Started with GWT RPC
 #labels Featured,Phase-Design,Phase-Implementation,RPC
 
+*If you are using GWT 1.x you can stop reading here and use the [http://docs.jboss.org/seam/2.2.1.CR1/reference/en-US/html/gwt.html#d0e23554 built-in GWT support].*
+
+Otherwise, the gwt-seam-service will save you much time.
+
  # Make sure your web.xml contains the `SeamResourceServlet`
 {{{
    <servlet>
