@@ -1,4 +1,5 @@
 #summary Getting Started with GWT RPC
+#labels Featured,Phase-Design,Phase-Implementation,RPC
 
  # Make sure your web.xml contains the `SeamResourceServlet`
 {{{
