@@ -14,11 +14,23 @@
 }}}
  # Copy (override) gwt-servlet.jar to EAR project, lib folder. (this jar is from gwt and not from seam)
  # download gwt-seam-seperate-x.zip from the download section 
- # Add gwt-seam-service.jar to 
-   * your lib folder 
-   * the build path
-   * the deployed ear jars
- # Change all service endpoints to seam/resource/*gwtp* 
+ # If you are using seam-gen the project should look something like this:
+{{{
+MyGWTSeamProject
+  |+ ....
+  |+ lib
+    |+ ....
+    |+ gwt-servlet.jar //replace this with your GWT SDK gwt-servlet.jar
+    |+ gwt-seam-service.jar
+    |+ ....
+  |+ resources
+    |+ ....
+    |+ gwtseam.properties //custom endpoint - see below
+    |+ ....
+  |+ ....
+  |+ deployed-jars-ear.list //add gwt-servlet.jar and gwt-seam.jar
+}}}
+ # Change all service endpoints to seam/resource/*gwtp* unless you've set your own CustomEndpoint.
 {{{
 ...
 @RemoteServiceRelativePath("../seam/resource/gwtp")
