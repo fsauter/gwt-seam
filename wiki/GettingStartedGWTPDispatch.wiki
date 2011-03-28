@@ -115,7 +115,7 @@ public class SeamDispatchConfiguration implements DispatchConfiguration {
 ...
 }}}
 
-By default gwt-seam uses the filter: 
+By default gwt-seam is using the filter url pattern: 
 {{{
 *.html
 }}}
