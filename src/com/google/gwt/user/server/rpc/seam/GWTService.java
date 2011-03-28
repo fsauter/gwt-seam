@@ -7,8 +7,6 @@ import java.net.URL;
 import java.text.ParseException;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.MissingResourceException;
-import java.util.ResourceBundle;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
@@ -39,6 +37,8 @@ import com.google.gwt.user.server.rpc.impl.ServerSerializationStreamWriter;
  */
 public abstract class GWTService extends AbstractResource implements SerializationPolicyProvider {
 
+	public static final String DEFAULT_ENDPOINT = "gwtp";
+	
 	protected static final LogProvider log = Logging.getLogProvider(GWTService.class);
 
 	/**
@@ -49,20 +49,17 @@ public abstract class GWTService extends AbstractResource implements Serializati
 
 	@Override
 	public String getResourcePath() {
-		String endpoint = "gwtp";
+		String endPoint = DEFAULT_ENDPOINT;
+		String customEndpoint = GWTSeamBundleReader.getKeyValueAsString("gwt.rpc.endpoint");
 		
-		try {
-			ResourceBundle bundle = ResourceBundle.getBundle("gwtseam");
-			Object customEndpoint = bundle.getObject("gwt.rpc.endpoint");
-			if(customEndpoint != null) {
-				endpoint = String.valueOf(customEndpoint);
-				getServletContext().log("Found gwtseam.properties and custom endpoint seam/resource/" + endpoint);
-			}
-		} catch(MissingResourceException e) {
-			getServletContext().log("No gwtseam.properties found. Falling back to endpoint seam/resource/" + endpoint);
+		if(customEndpoint != null) {
+			endPoint = customEndpoint;
+			getServletContext().log("Found gwtseam.properties and custom endpoint seam/resource/" + customEndpoint);
+		} else {
+			getServletContext().log("No gwtseam.properties or gwt.rpc.endpoint property found. Falling back to endpoint seam/resource/" + DEFAULT_ENDPOINT);
 		}
 		
-		return "/" + endpoint;
+		return "/" + endPoint;
 	}
 
 	protected abstract ServerSerializationStreamReader getStreamReader();
