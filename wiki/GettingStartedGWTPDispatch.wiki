@@ -21,7 +21,7 @@ You should already be familiar with the [http://code.google.com/p/gwt-platform/w
 Create the following component:
 
 {{{
-@Name("gwtpDispatchConfiguration")
+@Name(DispatchConfiguration.COMPONENT_NAME)
 @SecurityCookieFilterConfig(filterClass = HttpSessionSecurityCookieFilter.class, cookieName = "MYCOOKIE")
 public class SeamDispatchConfiguration implements DispatchConfiguration {
 
@@ -33,7 +33,7 @@ public class SeamDispatchConfiguration implements DispatchConfiguration {
 }
 }}}
 
-Please be aware of the `@Name("gwtpDispatchConfiguration")` annotation (it has to be this name and not any other). This component is equivalent to [http://code.google.com/p/gwt-platform/source/browse/gwtp-core/gwtp-dispatch-server/src/main/java/com/gwtplatform/dispatch/server/guice/HandlerModule.java GWTP's Guice Handler Module].
+Please be aware of the `@Name(DispatchConfiguration.COMPONENT_NAME)` annotation (it has to be this name and not any other). This component is equivalent to [http://code.google.com/p/gwt-platform/source/browse/gwtp-core/gwtp-dispatch-server/src/main/java/com/gwtplatform/dispatch/server/guice/HandlerModule.java GWTP's Guice Handler Module].
 
 == The action and result ==
 Only thing to know: The serviceName/endpoint have to be `seam/resource/gwtp` unless you've set your own CustomEndpoint. 
@@ -95,22 +95,36 @@ public class LoggedInActionValidator implements ActionValidator {
 
 == Protecting against XSRF attacks  ==
 
-To protect your application against XSRF attacks, as described in <a href="http://groups.google.com/group/Google-Web-Toolkit/web/security-for-gwt-applications">Security for GWT Applications </a>, you have to specify the name of the security cookie you want to use. Do this by binding a string constant annotated with `@SecurityCookie` both on the client and on the server. On the client, you can do this in the `configure()` method of any of your client modules. On the server side, you can do it in your `configureServlets` method of your `servletModule`. The code to do this is:
+To protect your application against XSRF attacks, as described in <a href="http://groups.google.com/group/Google-Web-Toolkit/web/security-for-gwt-applications">Security for GWT Applications </a>, you have to annotate your `DispatchConfiguration` with the following annotation:
+
 {{{
-    bindConstant().annotatedWith( SecurityCookie.class ).to("MYCOOKIE");
+...
+import com.gwtplatform.dispatch.server.seam.HttpSessionSecurityCookieFilter;
+....
+@SecurityCookieFilterConfig(filterClass = HttpSessionSecurityCookieFilter.class, cookieName = "MYCOOKIE")
+public class SeamDispatchConfiguration implements DispatchConfiguration {
+...
 }}}
 
-You should also make sure your `Action.isSecured` methods return `true` for the actions you want to secure against XSRF attacks. One way to do this is to have your actions inherit from `ActionImpl`.
-
-The cookie should contain a session-dependent random number that cannot be easily guessed by an attacker. You can set this cookie yourself as soon as the page is loaded, or you can use the `"JSESSIONID"` cookie, which can be easily enabled on a Tomcat server or on Google !AppEngine.
-
-If you don't want to use the `"JSESSIONID"` cookie, say because you don't want to enable it on !AppEngine, then you can add either `HttpSessionSecurityCookieFilter` or `RandomSessionSecurityCookieFilter` to your list of filters. To do so, add the following line at the top of your `configureServlets` method:
 {{{
-    filter("*.html").through( HttpSessionSecurityCookieFilter.class );
+...
+import com.gwtplatform.dispatch.server.seam.RandomSessionSecurityCookieFilter;
+....
+@SecurityCookieFilterConfig(filterClass = RandomSessionSecurityCookieFilter.class, cookieName = "MYCOOKIE")
+public class SeamDispatchConfiguration implements DispatchConfiguration {
+...
 }}}
-Note that you will have to make sure your application `html` file is not served as a static page. To do this, add this to your `appengine-web.xml`:
+
+By default gwt-seam uses the filter: 
 {{{
-<static-files>
-    <exclude path="/**.html" />
-</static-files>
+*.html
+}}}
+
+You can change this property adding following line to your gwtseam.properties file (see CustomEndpoint):
+{{{
+gwtp.security.filter.pattern=seam/resource/*
+}}}
+Or: 
+{{{
+gwtp.security.filter.pattern=*.jsp
 }}}
