@@ -1,11 +1,9 @@
 package com.gwtplatform.dispatch.server.seam;
 
-import org.jboss.seam.ScopeType;
 import org.jboss.seam.annotations.AutoCreate;
 import org.jboss.seam.annotations.Create;
 import org.jboss.seam.annotations.In;
 import org.jboss.seam.annotations.Name;
-import org.jboss.seam.annotations.Scope;
 
 import com.gwtplatform.dispatch.server.AbstractDispatchImpl;
 import com.gwtplatform.dispatch.server.Dispatch;
@@ -16,8 +14,7 @@ import com.gwtplatform.dispatch.shared.Result;
 import com.gwtplatform.dispatch.shared.ServiceException;
 
 @AutoCreate
-@Name("gwtDispatchImpl")
-@Scope(ScopeType.APPLICATION)
+@Name("gwtpDispatchImpl")
 public class DispatchImpl implements Dispatch {
 
 	@In private ActionHandlerValidatorRegistry gwtpActionHandlerValidatorRegistry;
