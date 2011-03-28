@@ -6,3 +6,4 @@
   * CustomEndpoint
  * Running Examples
   * HelloWorldSeamSample
+  * HelloWorldSeamGWTPSample
