@@ -3,15 +3,6 @@
 
 <wiki:toc max_depth="2" />
 
- * [#Notice Notice]
- * [#Introduction Introduction]
- * [#Setting_up_server Setting up server]
- * [#The_configuration The Configuration]
- * [#The_action_and_result The Action]
- * [#The_handler The Handler]
- * [#The_validator The Validator]
- * [#Restrictions Restrictions]
-
 == Notice ==
 
 You should already be familiar with the [http://code.google.com/p/gwt-platform/wiki/GettingStartedDispatch GWTP Dispatch Module] and a working GWTP project skeleton in your src folder which inherits the GWTP Dispatch Module.
@@ -24,8 +15,6 @@ You should already be familiar with the [http://code.google.com/p/gwt-platform/w
    * your lib folder 
    * the build path
    * the deployed ear jars
-
-= Setting up an Action/Result/Handler (including Validator) pair =
 
 == The configuration == 
 
