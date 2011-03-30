@@ -117,8 +117,8 @@ public class SeamDispatchConfiguration implements DispatchConfiguration {
 ...
 }}}
 
-By default gwt-seam is using the filter url pattern: 
+By default gwt-seam is using the following filter url pattern: 
 {{{
 SecurityCookieFilterConfig.DEFAULT_URL_PATTERN // -> /seam/resource/*
 }}}
-You can change this pattern by adding the property ´urlPattern´ to your ´@SecurityCookieFilterConfig´
+You can change this pattern by adding the property `urlPattern` to your `@SecurityCookieFilterConfig` (equivalent to the guice `filter("*.html").through( HttpSessionSecurityCookieFilter.class );` line) 
