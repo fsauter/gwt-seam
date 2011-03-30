@@ -26,16 +26,16 @@ import com.gwtplatform.dispatch.server.AbstractHttpSessionSecurityCookieFilter;
  */
 public class HttpSessionSecurityCookieFilter extends AbstractHttpSessionSecurityCookieFilter implements SecurityCookieFilter {
 
-  private final HttpSession session;
+	private final HttpSession session;
 
-  HttpSessionSecurityCookieFilter(String securityCookieName, HttpSession session) {
-    super(securityCookieName);
-    this.session = session;
-  }
+	public HttpSessionSecurityCookieFilter(String securityCookieName, HttpSession session) {
+		super(securityCookieName);
+		this.session = session;
+	}
 
-  @Override
-  protected HttpSession getSession() {
-    return session;
-  }
+	@Override
+	protected HttpSession getSession() {
+		return session;
+	}
 
 }

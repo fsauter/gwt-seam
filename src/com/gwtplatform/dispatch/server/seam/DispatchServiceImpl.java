@@ -2,6 +2,7 @@ package com.gwtplatform.dispatch.server.seam;
 
 import java.util.logging.Logger;
 
+import org.jboss.seam.Component;
 import org.jboss.seam.annotations.Create;
 import org.jboss.seam.annotations.In;
 import org.jboss.seam.annotations.Name;
@@ -27,11 +28,11 @@ public class DispatchServiceImpl extends RemoteServiceServlet implements Dispatc
 	protected NonAbstractDispatchServiceImpl dispatchService;
 	
 	@In protected DispatchImpl gwtpDispatchImpl;
-	@In(create = true) private DispatchConfiguration gwtpDispatchConfiguration;
 	@In protected HandlerRegistry gwtpActionHandlerValidatorRegistry;
 	
 	@Create
 	public void create() {
+		DispatchConfiguration gwtpDispatchConfiguration = (DispatchConfiguration) Component.getInstance(DispatchConfiguration.COMPONENT_NAME);
 		gwtpDispatchConfiguration.configureHandlers(gwtpActionHandlerValidatorRegistry);
 		SecurityCookieFilterConfig securityConfiguration = gwtpDispatchConfiguration.getClass().getAnnotation(SecurityCookieFilterConfig.class);
 		if(securityConfiguration != null) { 

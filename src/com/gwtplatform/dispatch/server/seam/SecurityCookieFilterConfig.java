@@ -13,9 +13,11 @@ import com.gwtplatform.dispatch.server.seam.SecurityCookieFilter;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface SecurityCookieFilterConfig {
 
+	public static final String DEFAULT_URL_PATTERN = "/seam/resource/*";
+	
 	Class<? extends SecurityCookieFilter> filterClass();
 	
-	String urlPattern() default "/seam/resource/*";
+	String urlPattern() default DEFAULT_URL_PATTERN;
 	
 	String cookieName() default "";
 	
