@@ -39,7 +39,7 @@ Please be aware of the `@Name(DispatchConfiguration.COMPONENT_NAME)` annotation 
 Only thing to know: The serviceName/endpoint have to be `seam/resource/gwtp` unless you've set your own CustomEndpoint. 
 
 {{{
-@GenDispatch(serviceName="seam/resource/gwtp", isSecure=false)
+@GenDispatch(serviceName=DispatchConfiguration.DEFAULT_ENDPOINT, isSecure=false)
 public class HelloWorld {
 
 	@In(1) String name;
