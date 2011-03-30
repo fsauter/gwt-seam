@@ -117,14 +117,6 @@ public class SeamDispatchConfiguration implements DispatchConfiguration {
 
 By default gwt-seam is using the filter url pattern: 
 {{{
-*.html
+SecurityCookieFilterConfig.DEFAULT_URL_PATTERN // -> /seam/resource/*
 }}}
-
-You can change this property adding following line to your gwtseam.properties file (see CustomEndpoint):
-{{{
-gwtp.security.filter.pattern=seam/resource/*
-}}}
-Or: 
-{{{
-gwtp.security.filter.pattern=*.jsp
-}}}
+You can change this pattern by adding the property ´urlPattern´ to your ´@SecurityCookieFilterConfig´
