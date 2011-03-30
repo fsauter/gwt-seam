@@ -95,7 +95,9 @@ public class LoggedInActionValidator implements ActionValidator {
 
 == Protecting against XSRF attacks  ==
 
-To protect your application against XSRF attacks, as described in <a href="http://groups.google.com/group/Google-Web-Toolkit/web/security-for-gwt-applications">Security for GWT Applications </a>, you have to annotate your `DispatchConfiguration` with the following annotation:
+Have a look at the following topic for an short introduction: <a href="http://code.google.com/p/gwt-platform/wiki/GettingStartedDispatch#Protecting_against_XSRF_attacks">GWTP & XSRF attacks</a>
+
+You can add either HttpSessionSecurityCookieFilter or RandomSessionSecurityCookieFilter to your list of filters. To do so, add the following annotation at the top of your DispatchConfiguration component:
 
 {{{
 ...
