@@ -97,7 +97,7 @@ public class LoggedInActionValidator implements ActionValidator {
 
 Have a look at the following topic for an short introduction: <a href="http://code.google.com/p/gwt-platform/wiki/GettingStartedDispatch#Protecting_against_XSRF_attacks">GWTP & XSRF attacks</a>
 
-You can add either HttpSessionSecurityCookieFilter or RandomSessionSecurityCookieFilter to your list of filters. To do so, add the following annotation at the top of your DispatchConfiguration component:
+You can add either `HttpSessionSecurityCookieFilter` or `RandomSessionSecurityCookieFilter` to your list of filters. To do so, add the following annotation at the top of your `DispatchConfiguration` component:
 
 {{{
 ...
