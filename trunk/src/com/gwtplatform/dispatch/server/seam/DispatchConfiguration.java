@@ -9,7 +9,7 @@ import com.google.gwt.user.server.rpc.seam.GWTService;
  */
 public interface DispatchConfiguration {
 	
-	public static final String DEFAULT_ENDPOINT = "seam/resource" + GWTService.DEFAULT_RESOURCE_PATH;
+	public static final String DEFAULT_ENDPOINT = "seam/resource/" + GWTService.DEFAULT_RESOURCE_PATH;
 	public static final String COMPONENT_NAME = "gwtpDispatchConfiguration";
 	
 	void configureHandlers(HandlerRegistry handlerRegistry);
