@@ -53,7 +53,10 @@ public class SeamSecurityCookieFilter extends AbstractFilter {
 	@Create
 	public void create() {
 		DispatchConfiguration gwtpDispatchConfiguration = (DispatchConfiguration) Component.getInstance(DispatchConfiguration.COMPONENT_NAME);
-		SecurityCookieFilterConfig securityConfiguration = gwtpDispatchConfiguration.getClass().getAnnotation(SecurityCookieFilterConfig.class);
+		SecurityCookieFilterConfig securityConfiguration = null;
+		if(gwtpDispatchConfiguration != null) {
+			securityConfiguration = gwtpDispatchConfiguration.getClass().getAnnotation(SecurityCookieFilterConfig.class);
+		}
 		if(securityConfiguration == null) {
 			log.info("GWTP - Protecting against XSRF attacks is off.");
 			setUrlPattern(SecurityCookieFilterConfig.DEFAULT_URL_PATTERN);
