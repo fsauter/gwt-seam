@@ -1,0 +1,3 @@
+# Module helloworldseamgwt
+# RPC service class, partial path of RPC policy file
+de.rentoudu.seamgwt.client.GreetingService, 5EF81191AE17B21C16063552660F720D.gwt.rpc

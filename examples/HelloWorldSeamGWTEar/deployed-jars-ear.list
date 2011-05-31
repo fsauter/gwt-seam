@@ -13,3 +13,5 @@ jboss-seam-remoting.jar
 jbpm-jpdl.jar
 mvel2.jar
 richfaces-api.jar
+#GWT
+gwt-servlet.jar

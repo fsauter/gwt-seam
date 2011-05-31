@@ -1,0 +1,2 @@
+serviceClass: de.rentoudu.seamgwt.client.GreetingService
+path: 5EF81191AE17B21C16063552660F720D.gwt.rpc
