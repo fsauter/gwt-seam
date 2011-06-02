@@ -3,7 +3,7 @@ package com.gwtplatform.dispatch.server.seam;
 import com.google.gwt.user.server.rpc.seam.GWTService;
 
 /**
- * The dispatch configuration of GWTP Seam.
+ * The dispatch configuration of GWT Seam.
  * 
  * @author Florian Sauter
  */

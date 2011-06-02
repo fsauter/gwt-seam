@@ -24,7 +24,7 @@ import com.gwtplatform.dispatch.server.AbstractHttpSessionSecurityCookieFilter;
  * 
  * @author Florian Sauter
  */
-public class HttpSessionSecurityCookieFilter extends AbstractHttpSessionSecurityCookieFilter implements SecurityCookieFilter {
+public class HttpSessionSecurityCookieFilter extends AbstractHttpSessionSecurityCookieFilter implements IsSecurityCookieFilter {
 
 	private final HttpSession session;
 

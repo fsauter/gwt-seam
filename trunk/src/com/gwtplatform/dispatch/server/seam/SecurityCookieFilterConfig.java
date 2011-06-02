@@ -6,7 +6,7 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-import com.gwtplatform.dispatch.server.seam.SecurityCookieFilter;
+import com.gwtplatform.dispatch.server.seam.IsSecurityCookieFilter;
 
 @Inherited
 @Target({ElementType.TYPE})
@@ -15,7 +15,7 @@ public @interface SecurityCookieFilterConfig {
 
 	public static final String DEFAULT_URL_PATTERN = "/seam/resource/*";
 	
-	Class<? extends SecurityCookieFilter> filterClass();
+	Class<? extends IsSecurityCookieFilter> filterClass();
 	
 	String urlPattern() default DEFAULT_URL_PATTERN;
 	
