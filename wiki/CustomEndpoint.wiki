@@ -1,5 +1,7 @@
 #summary Description how to setup your endpoint
 
+== Note: This feature is no longer available in trunk ==
+
 = Custom endpoint =
 
 By default you have to use ../seam/resource/gwtp as resource endpoint but you can also define your own.
