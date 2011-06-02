@@ -37,7 +37,7 @@ import com.google.gwt.user.server.rpc.impl.ServerSerializationStreamWriter;
  */
 public abstract class GWTService extends AbstractResource implements SerializationPolicyProvider {
 
-	public static final String DEFAULT_RESOURCE_PATH = "gwtp";
+	public static final String DEFAULT_RESOURCE_PATH = "gwtRpc";
 	
 	protected static final LogProvider log = Logging.getLogProvider(GWTService.class);
 
@@ -49,17 +49,7 @@ public abstract class GWTService extends AbstractResource implements Serializati
 
 	@Override
 	public String getResourcePath() {
-		String endPoint = DEFAULT_RESOURCE_PATH;
-		String customEndpoint = GWTSeamBundleReader.getKeyValueAsString("gwt.rpc.endpoint");
-		
-		if(customEndpoint != null) {
-			endPoint = customEndpoint;
-			getServletContext().log("Found gwtseam.properties and custom endpoint seam/resource/" + customEndpoint);
-		} else {
-			getServletContext().log("No gwtseam.properties or gwt.rpc.endpoint property found. Falling back to endpoint seam/resource/" + DEFAULT_RESOURCE_PATH);
-		}
-		
-		return "/" + endPoint;
+		return "/" + DEFAULT_RESOURCE_PATH;
 	}
 
 	protected abstract ServerSerializationStreamReader getStreamReader();

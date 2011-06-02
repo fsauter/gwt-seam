@@ -20,7 +20,7 @@ import com.google.gwt.user.server.rpc.impl.ServerSerializationStreamWriter;
 @Scope(APPLICATION)
 @Name("org.jboss.seam.remoting.gwt.gwtpRemoteService")
 @BypassInterceptors
-public class GWTPService extends GWTService {
+public class GWTRPCService extends GWTService {
 
 	private static final String SERIALIZATION_POLICY_PROVIDER_CLASS = "com.google.gwt.user.server.rpc.SerializationPolicyProvider";
 
@@ -36,7 +36,7 @@ public class GWTPService extends GWTService {
 	@Create
 	public void startup() throws Exception {
 		try {
-			log.trace("GWTPService starting up");
+			log.trace("GWTRPCService starting up");
 
 			Class<?> policyProviderClass = Class.forName(SERIALIZATION_POLICY_PROVIDER_CLASS);
 			Class<?> serializationPolicyClass = Class.forName(SERIALIZATION_POLICY_CLASS);
@@ -50,7 +50,7 @@ public class GWTPService extends GWTService {
 			Method m = legacySerializationPolicyClass.getDeclaredMethod("getInstance");
 			legacySerializationPolicy = m.invoke(null);
 		} catch (Exception ex) {
-			log.error("Error initializing GWTPService. Please ensure the GWT 2.0 libraries are in the classpath.");
+			log.error("Error initializing GWTRPCService. Please ensure the GWT 2.0 libraries are in the classpath.");
 			throw ex;
 		}
 	}
