@@ -18,7 +18,7 @@ import com.google.gwt.user.server.rpc.impl.ServerSerializationStreamWriter;
  * @author Shane Bryzak
  */
 @Scope(APPLICATION)
-@Name("org.jboss.seam.remoting.gwt.gwtpRemoteService")
+@Name("org.jboss.seam.remoting.gwt.gwtRpcRemoteService")
 @BypassInterceptors
 public class GWTRPCService extends GWTService {
 
