@@ -1,4 +1,5 @@
 #summary Description how to setup your endpoint
+#labels Phase-Deploy,Deprecated
 
 == Note: This feature is no longer available since version 0.2.1 ==
 
