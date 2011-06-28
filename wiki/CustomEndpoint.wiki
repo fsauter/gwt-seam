@@ -1,6 +1,6 @@
 #summary Description how to setup your endpoint
 
-== Note: This feature is no longer available in trunk ==
+== Note: This feature is no longer available since version 0.2.1 ==
 
 = Custom endpoint =
 
