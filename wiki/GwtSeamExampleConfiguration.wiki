@@ -5,6 +5,8 @@
 
 = Compile Configuration =
 
+Important: the `-war view` argument.
+
 http://share.rentoudu.de/images/tutorials/gwt-seam/setup/compile_configuration.png
 
 == Compile Result ==
