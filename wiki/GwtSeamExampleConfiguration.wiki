@@ -3,21 +3,21 @@
 
 <wiki:toc max_depth="2" />
 
-=== Compile Configuration ===
+= Compile Configuration =
 
 http://share.rentoudu.de/images/tutorials/gwt-seam/setup/compile_configuration.png
 
-=== Compile Result ===
+== Compile Result ==
 
 http://share.rentoudu.de/images/tutorials/gwt-seam/setup/configuration_folder_view.png
 
-=== Deployed ears ===
+= Deployed ears =
 
 (contains some more stuff)
 
 http://share.rentoudu.de/images/tutorials/gwt-seam/setup/configuration_container_ears.png
 
-=== Google Plugin configuration ===
+= Google Plugin configuration =
 
 http://share.rentoudu.de/images/tutorials/gwt-seam/setup/google_plugin_config_1.png
 
