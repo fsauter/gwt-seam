@@ -2,6 +2,7 @@
  * [GwtSeam About]
  * [GettingStartedGWTRPC GWT RPC]
  * [GettingStartedGWTPDispatch GWTP Dispatch]
+ * [GettingStartedGWTRequestFactory GWT RequestFactory]
  * Running Examples
   * [GwtSeamExampleConfiguration Example screenshots]
   * HelloWorldSeamSample
