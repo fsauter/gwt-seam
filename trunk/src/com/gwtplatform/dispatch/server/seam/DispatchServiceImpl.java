@@ -9,7 +9,7 @@ import org.jboss.seam.annotations.Name;
 import org.jboss.seam.annotations.remoting.WebRemote;
 
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
-import com.gwtplatform.dispatch.client.DispatchService;
+import com.gwtplatform.dispatch.shared.DispatchService;
 import com.gwtplatform.dispatch.server.AbstractDispatchServiceImpl;
 import com.gwtplatform.dispatch.server.Dispatch;
 import com.gwtplatform.dispatch.server.RequestProvider;

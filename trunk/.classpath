@@ -2,9 +2,9 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
-	<classpathentry kind="lib" path="lib/gwtp-all-0.5.1.jar"/>
 	<classpathentry kind="lib" path="lib/jboss-seam-remoting.jar"/>
 	<classpathentry kind="lib" path="lib/jboss-seam.jar"/>
 	<classpathentry kind="lib" path="lib/gwt-user.jar"/>
+	<classpathentry kind="lib" path="lib/gwtp-all-0.6.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
