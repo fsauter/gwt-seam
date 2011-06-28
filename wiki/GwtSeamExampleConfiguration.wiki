@@ -1,0 +1,24 @@
+#summary GWT and Seam example configuration screenshots.
+#labels Phase-Deploy
+
+<wiki:toc max_depth="2" />
+
+=== Compile Configuration ===
+
+http://share.rentoudu.de/images/tutorials/gwt-seam/setup/compile_configuration.png
+
+=== Compile Result ===
+
+http://share.rentoudu.de/images/tutorials/gwt-seam/setup/configuration_folder_view.png
+
+=== Deployed ears ===
+
+(contains some more stuff)
+
+http://share.rentoudu.de/images/tutorials/gwt-seam/setup/configuration_container_ears.png
+
+=== Google Plugin configuration ===
+
+http://share.rentoudu.de/images/tutorials/gwt-seam/setup/google_plugin_config_1.png
+
+http://share.rentoudu.de/images/tutorials/gwt-seam/setup/google_plugin_config_2.png
