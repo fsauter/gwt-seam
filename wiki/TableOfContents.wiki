@@ -2,8 +2,6 @@
  * [GwtSeam About]
  * [GettingStartedGWTRPC GWT RPC]
  * [GettingStartedGWTPDispatch GWTP Dispatch]
- * Trivial features
-  * CustomEndpoint
  * Running Examples
   * [GwtSeamExampleConfiguration Example screenshots]
   * HelloWorldSeamSample
