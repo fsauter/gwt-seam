@@ -29,7 +29,8 @@
 
 	<target name="build-gwt-seam" depends="clean, prepare-build, compile" description="Jars all components.">
 		<jar destfile="${target.dir}/gwt-seam.jar" basedir="${build.dir}" />
-		<jar destfile="${target.dir}/gwt-seam-service.jar" basedir="${build.dir}" includes="com/google/**, META-INF/**" />
+		<jar destfile="${target.dir}/gwt-seam-rpc.jar" basedir="${build.dir}" includes="com/google/gwt/**, META-INF/**" />
+		<jar destfile="${target.dir}/gwt-seam-request-factory.jar" basedir="${build.dir}" includes="com/google/web/**, META-INF/**" />
 		<jar destfile="${target.dir}/gwt-seam-gwtp.jar" basedir="${build.dir}" includes="com/gwtplatform/**, META-INF/**" />
 	</target>
 	
