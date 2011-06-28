@@ -36,7 +36,7 @@ public class SeamDispatchConfiguration implements DispatchConfiguration {
 Please be aware of the `@Name(DispatchConfiguration.COMPONENT_NAME)` annotation (it has to be this name and not any other). This component is equivalent to [http://code.google.com/p/gwt-platform/source/browse/gwtp-core/gwtp-dispatch-server/src/main/java/com/gwtplatform/dispatch/server/guice/HandlerModule.java GWTP's Guice Handler Module].
 
 == The action and result ==
-Only thing to know: The serviceName/endpoint have to be `seam/resource/gwtp` unless you've set your own CustomEndpoint. 
+Only thing to know: The serviceName/endpoint have to be `seam/resource/gwtRpc` unless you've set your own CustomEndpoint. 
 
 {{{
 @GenDispatch(serviceName=DispatchConfiguration.DEFAULT_ENDPOINT, isSecure=false)
