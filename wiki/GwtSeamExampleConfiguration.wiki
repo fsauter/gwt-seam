@@ -17,7 +17,7 @@ Following folders are generated:
 
 http://share.rentoudu.de/images/tutorials/gwt-seam/setup/configuration_folder_view.png
 
-= Deployed ears =
+= Deployed ear jars =
 
 Contains some more stuff.. important are:
 gwt-servlet.jar & gwt-seam.jar
