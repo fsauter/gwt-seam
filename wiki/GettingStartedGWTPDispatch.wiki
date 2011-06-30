@@ -3,6 +3,10 @@
 
 <wiki:toc max_depth="2" />
 
+== Requirements ==
+
+ * [http://code.google.com/p/gwt-platform/downloads/detail?name=gwtp-all-0.6.zip GWTP 0.6]
+
 == Notice ==
 
 You should already be familiar with the [http://code.google.com/p/gwt-platform/wiki/GettingStartedDispatch GWTP Dispatch Module] and a working GWTP project skeleton in your src folder which inherits the GWTP Dispatch Module.
