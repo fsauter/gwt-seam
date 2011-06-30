@@ -20,7 +20,7 @@ import com.gwtplatform.dispatch.shared.ActionException;
 import com.gwtplatform.dispatch.shared.Result;
 import com.gwtplatform.dispatch.shared.ServiceException;
 
-@Name("com.gwtplatform.dispatch.client.DispatchService")
+@Name("com.gwtplatform.dispatch.shared.DispatchService")
 public class DispatchServiceImpl extends RemoteServiceServlet implements DispatchService {
 
 	private static final long serialVersionUID = -708585059678689064L;

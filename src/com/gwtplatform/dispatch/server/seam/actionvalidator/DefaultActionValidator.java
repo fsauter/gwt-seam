@@ -16,7 +16,6 @@
 
 package com.gwtplatform.dispatch.server.seam.actionvalidator;
 
-import org.jboss.seam.annotations.AutoCreate;
 import org.jboss.seam.annotations.Name;
 
 import com.gwtplatform.dispatch.server.actionvalidator.AbstractDefaultActionValidator;
@@ -27,7 +26,6 @@ import com.gwtplatform.dispatch.server.actionvalidator.AbstractDefaultActionVali
  * 
  * @author Florian Sauter
  */
-@AutoCreate
 @Name("gwtpDefaultActionValidator")
 public class DefaultActionValidator extends AbstractDefaultActionValidator {
 }
