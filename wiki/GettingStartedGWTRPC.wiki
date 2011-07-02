@@ -43,7 +43,16 @@ public interface GreetingService extends RemoteService {
 	String greetServer(String name) throws IllegalArgumentException;
 }
 }}}
- # Redeploy your project now and you should never see the `IncompatibleRemoteServiceException` ever again!
+ # Create your Service implementation (important: `@Name` & `@WebRemote`)
+{{{
+@Name("org.jboss.seam.example.remoting.gwt.client.GreetingService")
+public class ServiceImpl implements MyService {
+   @WebRemote
+   public String askIt(String question) {
+....
+}}}
+ # Redeploy your project, point the GWT module page and enjoy the success!
+
 
 
 _Note: Radovan Sninský and Virgo created the quick fix which is included in the gwt-seam.jar:
