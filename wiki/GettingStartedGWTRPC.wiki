@@ -61,5 +61,9 @@ public class ServiceImpl implements MyService {
 
 = Using eclipse =
 
+* TODO *
+
+---- 
+
 _Note: Radovan Sninský and Virgo created the quick fix which is included in the gwt-seam.jar:
 [http://virgo47.wordpress.com/2010/02/09/jboss-seam-gwt-2-support/]_
