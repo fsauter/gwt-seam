@@ -1,9 +1,15 @@
 #summary Getting Started with GWT RPC
 #labels Featured,Phase-Design,Phase-Implementation,RPC
 
+<wiki:toc max_depth="1" />
+
+= Introduction =
+
 *If you are using GWT 1.x you can stop reading here and use the [http://docs.jboss.org/seam/2.2.1.CR1/reference/en-US/html/gwt.html#d0e23554 built-in GWT support].*
 
 Otherwise, the gwt-seam-service will save you much time.
+
+= Using seam-gen =
 
  # Make sure your web.xml contains the `SeamResourceServlet`
 {{{
@@ -53,7 +59,7 @@ public class ServiceImpl implements MyService {
 }}}
  # Redeploy your project, point the GWT module page and enjoy the success!
 
-
+= Using eclipse =
 
 _Note: Radovan Sninský and Virgo created the quick fix which is included in the gwt-seam.jar:
 [http://virgo47.wordpress.com/2010/02/09/jboss-seam-gwt-2-support/]_
