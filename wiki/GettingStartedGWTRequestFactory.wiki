@@ -3,7 +3,7 @@
 
 = Introduction =
 
-Enable RequestFactory support for your Seam & GWT project.
+Enable `RequestFactory` support for your Seam & GWT project.
 
 = Details =
 
@@ -12,13 +12,13 @@ http://code.google.com/webtoolkit/doc/latest/DevGuideRequestFactory.html
 
   * Download gwt-seam-seperate-x.zip and add gwt-seam-request-factory.jar to your deployed ear list.
   * To get started add the following code to your resources/WEB-INF/web.xml:
-<code language="xml">
+<code>
   <servlet>
     <servlet-name>requestFactoryServlet</servlet-name>
-    <servlet-class>com.google.web.bindery.requestfactory.server.SeamRequestFactoryServlet</servlet-class>
+    <servlet-class>com.example.module.server.SeamRequestFactoryServlet</servlet-class>
   </servlet>
 
-   <servlet-mapping>
+  <servlet-mapping>
     <servlet-name>requestFactoryServlet</servlet-name>
     <url-pattern>/gwtRequest</url-pattern>
   </servlet-mapping>
@@ -44,3 +44,5 @@ public class EmployeeRequestService {
 
 }
 </code>
+
+Also see: [http://floonit.blogspot.com/2011/05/gwt-requestfactory-with-jboss-6-and.html GWT RequestFactory with JBoss 6 and Seam 2]
