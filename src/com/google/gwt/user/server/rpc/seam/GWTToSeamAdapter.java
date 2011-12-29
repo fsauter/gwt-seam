@@ -22,7 +22,7 @@ import org.jboss.seam.util.EJB;
  * @author Michael Neale
  */
 @Scope(APPLICATION)
-@Name("org.jboss.seam.remoting.gwt.gwtpToSeamAdapter")
+@Name("org.jboss.seam.remoting.gwt.gwtRpcToSeamAdapter")
 @BypassInterceptors
 @Install(precedence=BUILT_IN)
 public class GWTToSeamAdapter {
