@@ -34,7 +34,7 @@ MyGWTSeamProject
     |+ gwt-seam-rpc.jar
     |+ ....
   |+ ....
-  |+ deployed-jars-ear.list //add gwt-servlet.jar and gwt-seam-rpc.jar
+  |+ deployed-jars-ear.list //add jboss-seam-remoting.jar & gwt-servlet.jar & gwt-seam-rpc.jar
 }}}
    * So in fact, all you have to do is update gwt-servlet.jar, copy gwt-seam-service.jar into your lib folder and add these to jars to the  deployed ear jars list. This setup should also work for Eclipse generated Seam Web projects.
  # Change all service endpoints to `..seam/resource/gwtRpc`.
