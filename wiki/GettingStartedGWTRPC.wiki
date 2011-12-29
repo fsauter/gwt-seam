@@ -49,7 +49,7 @@ public interface GreetingService extends RemoteService {
 {{{
 @Name("org.jboss.seam.example.remoting.gwt.client.GreetingService")
 public class ServiceImpl implements MyService {
-   @WebRemote
+   @WebRemote // should be found in jboss-seam-remoting.jar -> org.jboss.seam.annotations.remoting.WebRemote
    public String askIt(String question) {
 ....
 }}}
