@@ -12,10 +12,11 @@ http://code.google.com/webtoolkit/doc/latest/DevGuideRequestFactory.html
 
   * Download gwt-seam-seperate-x.zip and add gwt-seam-request-factory.jar to your deployed ear list.
   * To get started add the following code to your resources/WEB-INF/web.xml:
-<code>
-  <servlet>
-    <servlet-name>requestFactoryServlet</servlet-name>
-    <servlet-class>com.example.module.server.SeamRequestFactoryServlet</servlet-class>
+
+<code language="xml">
+<servlet>
+  <servlet-name>requestFactoryServlet</servlet-name>
+  <servlet-class>com.example.module.server.SeamRequestFactoryServlet</servlet-class>
   </servlet>
 
   <servlet-mapping>
@@ -23,7 +24,9 @@ http://code.google.com/webtoolkit/doc/latest/DevGuideRequestFactory.html
     <url-pattern>/gwtRequest</url-pattern>
   </servlet-mapping>
 </code>
+
   * Then define a `RequestContex` which is using the `SeamComponentServiceLocator` class as locator.
+
 <code language="java">
 @Service(value = EmployeeRequestService.class, locator = SeamComponentServiceLocator.class)
 public interface EmployeeRequest extends RequestContext {
