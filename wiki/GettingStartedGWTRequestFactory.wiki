@@ -33,7 +33,7 @@ public interface EmployeeRequest extends RequestContext {
 	  Request<Integer> countEmployees();
 }
 </code>
-  * And use the following service implementation of the above RequestContext.
+  * And use the following service implementation of the above `RequestContext`.
 <code language="java">
 @Name("employeeRequestService")
 public class EmployeeRequestService {
