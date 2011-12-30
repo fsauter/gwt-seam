@@ -1,4 +1,4 @@
-package com.google.web.bindery.requestfactory.shared;
+package com.google.web.bindery.requestfactory.server;
 
 import org.jboss.seam.Component;
 
