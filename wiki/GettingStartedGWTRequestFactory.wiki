@@ -38,7 +38,7 @@ public interface EmployeeRequest extends RequestContext {
 @Name("employeeRequestService")
 public class EmployeeRequestService {
  
-   In(create=true)
+   @In(create=true)
    EmployeeList employeeList;
    
    public Integer countEmployees() {
